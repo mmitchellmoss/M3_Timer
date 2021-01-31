@@ -2,15 +2,6 @@
 
 namespace M3 {
 
-    // Timer type getters and setters.
-    Timer::TimerType Timer::getTimerType() const {
-        return m_timerType;
-    }
-    bool Timer::setTimerType(Timer::TimerType timerType) {
-        m_timerType = timerType;
-        return true;
-    }
-
     // Start time getters and setters.
     unsigned long Timer::getStartTime() const {
         return m_startTime;
@@ -30,9 +21,13 @@ namespace M3 {
     }
 
 
+    // Constructor. Sets count up or down.
+    Timer::Timer(TimerType timerType) {
+        m_timerType = timerType;
+    }
 
 
-// Methods.
+    // Methods.
 
     // start() with no arguments is used for counting up only.
     bool Timer::start() {

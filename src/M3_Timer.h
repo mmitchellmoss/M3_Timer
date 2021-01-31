@@ -23,10 +23,6 @@ namespace M3 {
         // Enums.
         enum TimerType { COUNT_UP, COUNT_DOWN };
 
-        // Timer type getters and setters.
-        TimerType getTimerType() const;
-        bool setTimerType(TimerType timerType);
-
         // Start Time getters and setters.
         unsigned long getStartTime() const;
         bool setStartTime(unsigned long startTime);
@@ -35,7 +31,8 @@ namespace M3 {
         unsigned long getDuration() const;
         bool setDuration(unsigned long duration);
 
-        
+        // Constructors.
+        Timer(TimerType timerType);
 
         // Methods.
         bool start();
